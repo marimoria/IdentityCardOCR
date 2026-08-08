@@ -1,0 +1,45 @@
+# Dataset
+dataset/
+*.csv
+*.zip
+*.tar.gz
+!requirements.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env
+
+# Jupyter 
+.ipynb_checkpoints/
+
+# Generated outputs
+outputs/
+results/
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+
+# Logs 
+*.log
+
+# Credentials
+credentials.json
+token.json
+*.pem
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
