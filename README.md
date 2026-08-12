@@ -20,4 +20,16 @@ dataset/
     ├── image_002.jpg
     ├── ...
     └── image_732.jpg
+plan/
 ```
+
+## Proses Exploratory Data Analysis (EDA)
+
+Tahap Exploratory Data Analysis dilakukan pada file `1_EDA_and_Data_Understanding.ipynb` untuk memahami struktur dan kualitas dataset sebelum membangun model. Berikut adalah langkah utama yang dilakukan pada tahap ini:
+
+1. **Normalisasi Data Tabular**: Memperbaiki format file ground truth agar mudah diproses, terutama memisahkan baris yang mengandung alamat dengan format yang tidak standar.
+2. **Identifikasi Asal Dokumen**: Menemukan bahwa dataset terdiri dari dokumen Malaysia dan luar negeri. Hanya dokumen Malaysia yang memiliki informasi alamat.
+3. **Analisis Kualitas Gambar**: Mengekstrak metrik numerik seperti tingkat blur, kecerahan, dan kontras dari setiap gambar. Hal ini penting untuk menentukan teknik preprocessing yang sesuai nantinya.
+4. **Analisis Pola Teks**: Mempelajari format tanggal lahir dan pola penamaan khas (seperti penggunaan kata BIN atau BINTI) yang akan sangat berguna untuk melatih model klasifikasi teks.
+5. **Strategi Pembagian Data**: Mengidentifikasi adanya banyak foto untuk satu orang yang sama. Pembagian data latih dan uji kemudian dirancang dengan memisahkan identitas secara ketat agar model dievaluasi secara adil tanpa menghafal wajah atau nama.
+6. **Evaluasi OCR Dasar**: Menjalankan mesin OCR langsung pada gambar mentah tanpa modifikasi. Hasilnya membuktikan bahwa program perlu memotong area latar belakang dan menjernihkan gambar agar hasil pembacaan teks menjadi akurat.
